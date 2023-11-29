@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+    <h1>FORMULARIO</h1>
+        <form action="">
+        <label for="name"> 
+            <span>Ingrese su nombre</span> 
+            <input type="text" name="name" id="name">
+        </label>
+
+        <label for="name"> 
+            <span>Ingrese su fecha de nacimiento</span> 
+            <input type="date" name="name" id="nacimiento">
+        </label>
+
+        <label for="tiempo"> 
+            <span>Tiempo que demora de llenar el cuestionario </span>
+            <input type="time" name="name" id="tiempo">
+        </label>
+
+            <input type="submit">
+        </form>
+
+    <h1> CALENDARIO </h1>
+            <form action="">
+            <label for="hora"> 
+                <span>HORA</span> 
+                <input type="time" name="hora" id="hora">
+            </label>
+            <label for="dia"> 
+                <span>DIA</span>
+                <input type="date" name="dia" id="dia">
+            </label>
+            <label for="semana"> 
+                <span>SEMANA</span>
+                <input type="week" name="semana" id="semana">
+            </label>
+            <label for="mes"> 
+                <span>MES</span> 
+                <input type="month" name="mes" id="mes">
+            </label>
+                <input type="submit">
+            </form>
+
+            <form action="">
+                <label for=""><br>
+                    <span>CALENDARIO</span>
+                    <input type="datetime-local" id="calendario" name="tiempo">
+                </label>
+            </form>
+
+    <h1>FORMULARIO 2</h1>
+            <form action="">
+            <label for="name"> 
+                <span>¿Cual es tu nombre?</span>
+                <input type="text" name="name" id="name" autocomplete="name">
+            </label>
+            <label for="email"> 
+                <span>¿Cual es tu e-mail?</span>
+                <input type="email" name="email" id="email" autocomplete="email"> 
+            </label>
+            <label for="pais"> 
+                <span>¿En que pais vives? </span>
+                <input type="text" name="pais" id="pais" autocomplete="country">
+            </label>
+            <label for="cp"> 
+                <span>¿Cual es tu codigo postal?</span>
+                <input type="text" name="cp" id="cp" autocomplete="postal-code">
+            </label>
+                <input type="submit">
+            </form>
+
+    <h1> AUTOCOMPLETADO</h1>
+            <select name="unidades didacticas"> 
+                <option value="programacion web">PROGRAMACION WEB</option>
+                <option  value="HTML5">HTML5</option>
+                <option value="CSS3">CSS3</option>
+                <option value="JAVASCRIPT">JAVASCRIPT</option>
+            </select>
+
+            <input list="cursos">
+            <datalist id="cursos">
+                <option value="programacion web"></option>
+                <option value="HTML5"></option>
+                <option value="CSS3"></option>
+                <option value="JAVASCRIPT"></option>
+            </datalist>
+
+    <h1>BOTONES</h1>
+
+    <input type="submit" value="EXIT">
+    <button>ENVIAR</button>
+
+    <h1>CSS</h1>
+        <nav>
+            <ul class="main-nav">
+                <li class="main-nav_item"><a href="">Nosotros</a></li>
+                <li class="main-nav_item"><a href="">Carreras</a></li>
+                <li class="main-nav_item"><a href="">Docentes</a></li>
+                <li class="main-nav_item"><a href="">Fotos</a></li>
+            </ul>
+        </nav>
+    
+</body>
+</html>

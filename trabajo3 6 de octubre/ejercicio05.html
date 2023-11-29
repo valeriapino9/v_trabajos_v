@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dowhile</title>
+</head>
+<body>
+    <h1>Valores del bucle do...while </h1>
+    <ul id="resultados"></ul>
+
+    <script>
+         // Inicializar una variable para almacenar la secuencia de valores
+        var valor = 2;
+
+        do {
+            var listItem = document.createElement("li");
+            listItem.textContent = "El bucle tiene el valor de: " + valor;
+            document.getElementById("resultados").appendChild(listItem);
+            valor += 4; // Incrementa en 4 en cada iteración
+        } while (valor <= 18);
+    </script>
+
+</body>
+</html>

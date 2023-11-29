@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aislamiento</title>
+</head>
+<body>
+    <h2>SEPARACION DE  VOCALES Y CONSONANTES</h2>
+    <form id="myForm">
+        <label for="inputText">ESCRIBE LA FRASE</label>
+        <input type="text" id="inputText" name="inputText" required>
+        <button type="button" onclick="separarVocalesConsonantes()">Separar</button>
+    </form>
+    <p>Vocales: <span id="vocales"></span></p>
+    <p>Consonantes: <span id="consonantes"></span></p>
+
+    <script>
+        function separarVocalesConsonantes() {
+            var inputText = document.getElementById("inputText").value;
+            var vocales = separarVocales(inputText);
+            var consonantes = separarConsonantes(inputText);
+
+            document.getElementById("vocales").textContent = vocales;
+            document.getElementById("consonantes").textContent = consonantes;
+        }
+
+        function separarVocales(texto) {
+            var vowels = "";
+            texto = texto.toLowerCase(); // Convertir a minúsculas para hacer la comparación de vocales
+            for (var i = 0; i < texto.length; i++) {
+                var character = texto.charAt(i);
+                if (/[aeiouáéíóú]/.test(character)) {
+                    vowels += character;
+                }
+            }
+            return vowels;
+        }
+
+        function separarConsonantes(texto) {
+            var consonants = "";
+            texto = texto.toLowerCase(); // Convertir a minúsculas para hacer la comparación de consonantes
+            for (var i = 0; i < texto.length; i++) {
+                var character = texto.charAt(i);
+                if (/[b-df-hj-np-tv-z]/.test(character)) {
+                    consonants += character;
+                }
+            }
+            return consonants;
+        }
+    </script>
+
+</body>
+</html>

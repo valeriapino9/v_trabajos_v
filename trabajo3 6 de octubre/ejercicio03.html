@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESCUENTO</title>
+</head>
+<body>
+    <body>
+        <h1>Calculadora de Descuento</h1>
+        <label for="monto">Monto de la compra en soles:</label>
+        <input type="number" id="monto" placeholder="Ingrese el monto" />
+        <button onclick="calcularDescuento()">Calcular Descuento</button>
+        <p id="resultado"></p>
+    
+        <script>
+            function calcularDescuento() {
+                // Obtener el valor ingresado por el usuario
+                var monto = parseFloat(document.getElementById("monto").value);
+    
+                // Verificar si el monto es mayor de 500.00 soles
+                if (monto > 500.00) {
+                    // Calcular el descuento del 25%
+                    var descuento = monto * 0.25;
+                    var totalConDescuento = monto - descuento;
+    
+                    // Mostrar el resultado
+                    document.getElementById("resultado").innerHTML = "Monto con descuento: " + totalConDescuento.toFixed(2) + " soles";
+                } else {
+                    // Si el monto no es mayor de 500.00 soles, no hay descuento
+                    document.getElementById("resultado").innerHTML = "No se aplica descuento. Monto total: " + monto.toFixed(2) + " soles";
+                }
+            }
+        </script>
+    
+</body>
+</html>

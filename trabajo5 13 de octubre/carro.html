@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carros</title>
+</head>
+<body>
+    <script>
+function Carro(marca, modelo, annio, color) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.annio = annio;
+  this.color = color;
+}
+var carroList = [];
+for (var i = 0; i < 2; i++) {
+  var marca = prompt("INGRESE LA MARCA DEL AUTO: " + (i + 1));
+  var modelo = prompt("INGRESE EL MODELO DEL AUTO: " + (i + 1));
+  var annio = prompt("INGRESE EN ANNIO DEL AUTO: " + (i + 1));
+  var color = prompt("INGRESE EL COLOR DEL AUTO: " + (i + 1));
+  var carro = new Carro(marca, modelo, annio, color);
+  carroList.push(carro);
+  alert("Carro " + (i + 1) + ":\nMarca: " + carro.marca + "\nModelo: " + carro.modelo + "\nannio: " + carro.annio + "\nColor: " + carro.color);
+  alert("Carro " + (i + 2) + ":\nMarca: " + carro.marca + "\nModelo: " + carro.modelo + "\nannio: " + carro.annio + "\nColor: " + carro.color);
+  alert("Carro " + (i + 3) + ":\nMarca: " + carro.marca + "\nModelo: " + carro.modelo + "\nannio: " + carro.annio + "\nColor: " + carro.color);
+  alert("Carro " + (i + 4) + ":\nMarca: " + carro.marca + "\nModelo: " + carro.modelo + "\nannio: " + carro.annio + "\nColor: " + carro.color);
+  alert("Carro " + (i + 5) + ":\nMarca: " + carro.marca + "\nModelo: " + carro.modelo + "\nannio: " + carro.annio + "\nColor: " + carro.color);
+}
+console.log(carroList);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usuarios Desarrolladores</title>
+</head>
+<body>
+    <ul id="listaDesarrolladores"></ul>
+
+    <script>
+        // Crear un array de objetos llamado 'team'
+        var team = [
+            {
+                id: 1,
+                nombre: "mercedes alca",
+                email: "mercedes@example.com",
+                cargo: "developer",
+                sueldo: 60000
+            },
+            {
+                id: 2,
+                nombre: "veronica yaneth",
+                email: "veronica@example.com",
+                cargo: "UI designer",
+                sueldo: 55000
+            },
+            {
+                id: 3,
+                nombre: "cristian yoel",
+                email: "cristian@example.com",
+                cargo: "content manager",
+                sueldo: 50000
+            },
+            {
+                id: 4,
+                nombre: "Carlos agusto",
+                email: "carlos@example.com",
+                cargo: "backend engineer",
+                sueldo: 65000
+            },
+            {
+                id: 5,
+                nombre: "alex omar",
+                email: "alex@example.com",
+                cargo: "developer",
+                sueldo: 56000
+            }
+        ];
+
+        // Filtrar usuarios con el cargo "developer"
+        var desarrolladores = team.filter(function(persona) {
+            return persona.cargo === "developer";
+        });
+
+        // Mostrar los desarrolladores en la lista
+        var listaDesarrolladores = document.getElementById("listaDesarrolladores");
+
+        desarrolladores.forEach(function(desarrollador) {
+            var li = document.createElement("li");
+            li.textContent = "Nombre: " + desarrollador.nombre + ", Email: " + desarrollador.email;
+            listaDesarrolladores.appendChild(li);
+        });
+    </script>
+</body>
+</html>

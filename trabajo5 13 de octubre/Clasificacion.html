@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clasificaciones</title>
+</head>
+<body>
+    <script>
+        // Declarar el array de clasificaciones
+        var clasificaciones = ["Ana", "Oswaldo", "Raúl", "Celia", "María", "Antonio"];
+
+        // Imprimir la clasificación actual
+        document.write("Clasificación actual: " + clasificaciones.join(', ') + "<br>");
+
+        // Modificar las posiciones
+        // Celia adelanta a Raúl
+        clasificaciones[clasificaciones.indexOf("Celia")] = "Raúl";
+        clasificaciones[clasificaciones.indexOf("Raúl")] = "Celia";
+
+        // Antonio es descalificado y eliminado
+        var indexAntonio = clasificaciones.indexOf("Antonio");
+        if (indexAntonio !== -1) {
+            clasificaciones.splice(indexAntonio, 1);
+        }
+
+        // Insertar a Roberto y Amaya
+        clasificaciones.splice(clasificaciones.indexOf("Ana") + 1, 0, "Roberto", "Amaya");
+
+        // Agregar a Marta al principio
+        clasificaciones.unshift("Marta");
+
+        // Imprimir la clasificación actualizada
+        document.write("Clasificación actualizada: " + clasificaciones.join(', ') + "<br>");
+    </script>
+</body>
+</html>

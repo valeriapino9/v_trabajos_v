@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dia de la semana</title>
+</head>
+<body>
+    <h1>¿QUE DIA ES HOY?</h1>
+    <script>
+        var diaSemana = prompt("Ingresa el dia de la semana en español:").toLowerCase();
+        var diasEnEspanol = {
+            "lunes": "lunes",
+            "martes": "martes",
+            "miercoles": "miercoles",
+            "jueves": "jueves",
+            "viernes": "viernes",
+            "sabado": "sabado",
+            "domingo": "domingo"
+        };
+        if (diasEnEspanol[diaSemana]) {
+            var diaEnEspanol = diasEnEspanol[diaSemana];
+            var resultado = "Hoy es " + diaEnEspanol + ".";
+            document.write(resultado);
+        } else {
+            document.write("Dia desconocido");
+        }
+    </script>
+</body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+<body>
+    <h1>Valores del bucle For </h1>
+    <ul id="resultados"></ul>
+
+    <script>
+         // Inicializar una variable para almacenar la secuencia de valores
+        
+        for (var valor = 2; valor <= 18; valor += 4) {
+            var listItem = document.createElement("li");
+            listItem.textContent = "El bucle tiene el valor de: " + valor;
+            document.getElementById("resultados").appendChild(listItem);
+        }
+    </script>
+
+</body>
+</html>
